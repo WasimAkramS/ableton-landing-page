@@ -1,0 +1,132 @@
+@use 'variables';
+
+/************** Initial Resetting *****************/
+
+body {
+    font-family: $ff;
+    font-size: $fs-small;
+}
+
+img, video {
+    display: block;
+    max-width: 100%;
+    margin-inline: auto;
+    
+}
+
+/************Utility Classes***********/
+
+  
+.nav-flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: $sp-medium;
+    align-items: center;
+}
+
+/****************Header*********************/
+header {
+    font-size: $fs-medium;
+    padding: .5em 1.5em;
+    font-weight: $fw-bolder;
+    border-bottom: 2px solid rgb(206, 205, 205);
+}
+
+.nav-secondary {
+    padding: .5em 1.5em;
+    font-weight: $fw-bolder;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+p {
+    width: 90%;
+    margin: 1em auto;
+}
+
+.para {
+    margin-block: $sp-large;
+}
+
+section p:first-of-type {
+    font-size: $fs-xlarge;
+    font-weight: $fw-bold;
+}
+
+.hero {
+    width: 80%;
+    height: 80vh;
+    margin-inline: auto;
+    text-align: center;
+    background-image: url("images/hero-mobile.jpg") ;
+    background-size: cover;
+    border: 2px solid lime;    
+}
+
+/* picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+
+/*************Typography********************/
+
+@media (min-width:43.5em) {
+    
+        $fs-xsmall: 0.75rem;
+        $fs-small: 1.0rem;
+        $fs-medium: 1rem;
+        $fs-large: 1.2rem;
+        $fs-xlarge: 1.3rem;
+    
+    p {
+        width: 80%; 
+    }
+}
+
+@media (min-width:65.4em) {
+    
+        $fs-xsmall: 0.8rem;
+        $fs-small: 1.1rem;
+        $fs-medium: 1.15rem;
+        $fs-large: 1.35rem;
+        $fs-xlarge: 1.5rem;
+    
+    .nav-flex {
+        flex-direction: row;
+    }
+    .nav-right {
+        margin-left: auto;
+    }
+    .hero {
+        background-image: url("images/hero.jpg");
+        }
+}
+
+@media (min-width:71.5em) {
+    
+        $fs-medium: 1.2rem;
+    
+    p {
+        width: 50%;  
+    }
+   
+}
+
+@media (min-width:76.5em) {
+    
+        $fs-xsmall: 1rem;
+        $fs-small: 1.25rem;
+        $fs-medium: 1.30rem;
+        $fs-large: 1.45rem;
+        $fs-xlarge: 1.6rem;
+    
+}
