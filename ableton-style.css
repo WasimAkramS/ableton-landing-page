@@ -1,0 +1,172 @@
+/************** Initial Resetting *****************/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --ff: 'Josefin Sans', sans-serif;
+
+    --fs-xsmall: 0.65rem;
+    --fs-small: 0.9rem;
+    --fs-medium: 1rem;
+    --fs-large: 1.1rem;
+    --fs-xlarge: 1.2rem;
+
+    --fw-lighter: 300;
+    --fw-light: 400;
+    --fw-regular: 500;
+    --fw-bold: 600;
+    --fw-bolder: 700;
+
+    --sp-small: 1em;
+    --sp-medium: 2em;
+    --sp-large: 4em;
+    --sp-xlarge: 5em;
+
+    --clr-blue: rgb(61, 31, 197);
+    --clr-red: rgb(223, 70, 70);
+    --clr-yellow: rgb(209, 230, 96);
+    --clr-skyblue: rgb(124, 178, 240);
+    --clr-purple: rgb(222, 154, 231);
+    --clr-green: rgb(118, 230, 164);
+}
+
+/***************Media queries****************/
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--ff);
+    font-size: var(--fs-small);
+}
+
+img, video {
+    display: block;
+    max-width: 100%;
+    margin-inline: auto;
+    
+}
+
+/************Utility Classes***********/
+
+  
+.nav-flex {
+    display: flex;
+    flex-wap: wrap;
+    flex-direction: column;
+    gap: var(--sp-medium);
+    align-items: center;
+}
+
+/****************Header*********************/
+header {
+    font-size: var(--fs-medium);
+    padding: .5em 1.5em;
+    font-weight: var(--fw-bolder);
+    border-bottom: 2px solid rgb(206, 205, 205);
+}
+
+.nav-secondary {
+    padding: .5em 1.5em;
+    font-weight: var(--fw-bolder);
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+p {
+    width: 90%;
+    margin: 1em auto;
+}
+
+.para {
+    margin-block: var(--sp-large)
+}
+
+section p:first-of-type {
+    font-size: var(--fs-xlarge);
+    font-weight: var(--fw-bold);
+}
+
+.hero {
+    width: 80%;
+    height: 80vh;
+    margin-inline: auto;
+    text-align: center;
+    background-image: url("images/hero-mobile.jpg") ;
+    background-size: cover;
+    border: 2px solid lime;    
+}
+
+/* picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+
+/*************Typography********************/
+
+@media (min-width:43.5em) {
+    :root {
+        --fs-xsmall: 0.75rem;
+        --fs-small: 1.0rem;
+        --fs-medium: 1rem;
+        --fs-large: 1.2rem;
+        --fs-xlarge: 1.3rem;
+    }
+    p {
+        width: 80%; 
+    }
+}
+
+@media (min-width:65.4em) {
+    :root {
+        --fs-xsmall: 0.8rem;
+        --fs-small: 1.1rem;
+        --fs-medium: 1.15rem;
+        --fs-large: 1.35rem;
+        --fs-xlarge: 1.5rem;
+    }
+   
+    .nav-flex {
+        flex-direction: row;
+    }
+    .nav-right {
+        margin-left: auto;
+    }
+    .hero {
+        background-image: url("images/hero.jpg");
+        }
+}
+
+@media (min-width:71.5em) {
+    :root {
+        --fs-medium: 1.2rem;
+    }
+    p {
+        width: 50%;  
+    }
+   
+}
+
+@media (min-width:76.5em) {
+    :root {
+        --fs-xsmall: 1rem;
+        --fs-small: 1.25rem;
+        --fs-medium: 1.30rem;
+        --fs-large: 1.45rem;
+        --fs-xlarge: 1.6rem;
+    }
+}
